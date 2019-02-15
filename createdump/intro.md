@@ -19,7 +19,7 @@ Dump on crash
 journalctl
 
 
-// jeste nevyzkouseno
+// jeste nevyzkouseno   !!!! MIT DOST MISTA NA DISKU
 COMPlus_DbgEnableMiniDump: if set to "1", enables this core dump generation. The default is NOT to generate a dump.
 COMPlus_DbgMiniDumpType: if set to "1" generates MiniDumpNormal, "2" MiniDumpWithPrivateReadWriteMemory, "3" MiniDumpFilterTriage, "4" MiniDumpWithFullMemory. Default is MiniDumpNormal.
 COMPlus_DbgMiniDumpName: if set, use as the template to create the dump path and file name. The pid can be placed in the name with %d. The default is /tmp/coredump.%d.
@@ -59,6 +59,20 @@ find /usr/share/dotnet -name libsosplugin.so
 /usr/share/dotnet/shared/Microsoft.NETCore.App/1.1.0/libsosplugin.so
 
 
-lldb $(which dotnet) --core ./core
-plugin load /usr/share/dotnet/shared/Microsoft.NETCore.App/1.1.1/libsosplugin.so
-setclrpath /usr/share/dotnet/shared/Microsoft.NETCore.App/1.1.1
+lldb-4.0 $(which dotnet) --core /tmp/coredump.1
+plugin load /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7/libsosplugin.so
+setclrpath /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7
+
+/usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7
+/usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7/libsosplugin.so
+
+
+nestaci se jenom execnout jako --privileged, stejne create dump napise ze name prava, je potreba  aby to bylo pusteny jako privileged nebo SYS_PTRACE
+
+
+
+
+(lldb) sos Threads
+Failed to load data access DLL, 0x80004005
+Can not load or initialize libmscordaccore.so. The target runtime may not be initialized.
+Threads  failed
