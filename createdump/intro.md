@@ -60,8 +60,10 @@ find /usr/share/dotnet -name libsosplugin.so
 
 
 lldb-4.0 $(which dotnet) --core /tmp/coredump.1
+plugin load /usr/share/dotnet/shared/Microsoft.NETCore.App/2.2.2/libsosplugin.so
 plugin load /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7/libsosplugin.so
-setclrpath /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7
+setclrpath /usr/share/dotnet/shared/Microsoft.NETCore.App/2.2.2
+sethostruntime /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7
 
 /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7
 /usr/share/dotnet/shared/Microsoft.NETCore.App/2.1.7/libsosplugin.so
@@ -76,3 +78,19 @@ nestaci se jenom execnout jako --privileged, stejne create dump napise ze name p
 Failed to load data access DLL, 0x80004005
 Can not load or initialize libmscordaccore.so. The target runtime may not be initialized.
 Threads  failed
+
+
+
+
+COMPlus_PerfMapEnabled=1
+
+
+perf record -a -g -F 97 -p <PID>
+perf report -f
+docker cp azurerunner_test:/tmp/perf-1.map /tmp/perf-10142.map
+
+
+git clone --depth=1 https://github.com/BrendanGregg/FlameGraph
+
+
+perf script | FlameGraph/stackcollapse-perf.pl | FlameGraph/flamegraph.pl > flame.svg

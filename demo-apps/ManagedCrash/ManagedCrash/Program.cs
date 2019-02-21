@@ -1,14 +1,20 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
+using Lib;
 
 namespace ManagedCrash
 {
     class Program
     {
+        private static ThisLib Lib = new ThisLib();
         static void Main(string[] args)
         {
-            
+            Console.WriteLine("start");
+
+            //var engine = new JavaScriptEngineSwitcher.ChakraCore.ChakraCoreJsEngineFactory().CreateEngine();
+            Console.ReadLine();
             int seconds = 10;
             if (args.Length >= 1)
                 seconds = int.Parse(args[0]);
@@ -37,10 +43,10 @@ namespace ManagedCrash
             Console.WriteLine("I should ever get here.");
         }
 
-        [MethodImpl(MethodImplOptions.NoInlining)]
+        
         private static void Crash()
         {
-            throw new ApplicationException("Whooooups");
+            Lib.ThisWillCrash();
         }
     }
 }
