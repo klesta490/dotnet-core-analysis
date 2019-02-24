@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnsafeCrash", "UnsafeCrash\UnsafeCrash.csproj", "{7CE0E9BD-5A41-4F9B-89A5-EEFA24B53394}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exceptions", "Exceptions\Exceptions.csproj", "{4D82CCA0-E65A-4B67-8385-B0F74AF7A9E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7CE0E9BD-5A41-4F9B-89A5-EEFA24B53394}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CE0E9BD-5A41-4F9B-89A5-EEFA24B53394}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7CE0E9BD-5A41-4F9B-89A5-EEFA24B53394}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7CE0E9BD-5A41-4F9B-89A5-EEFA24B53394}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D82CCA0-E65A-4B67-8385-B0F74AF7A9E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D82CCA0-E65A-4B67-8385-B0F74AF7A9E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D82CCA0-E65A-4B67-8385-B0F74AF7A9E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D82CCA0-E65A-4B67-8385-B0F74AF7A9E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CC5776E8-C3B8-4773-833A-EBCED9AA639E}
+		SolutionGuid = {A6841930-D267-4742-9D7F-7704A4FB7AF8}
 	EndGlobalSection
 EndGlobal

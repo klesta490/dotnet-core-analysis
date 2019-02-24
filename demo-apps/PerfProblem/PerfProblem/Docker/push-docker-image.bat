@@ -5,4 +5,4 @@ IF NOT "%1"=="" (
     SET tag=%1
 )
 
-docker push quadient.azurecr.io/cloud/memorymap:%tag%
+docker push quadient.azurecr.io/cloud/perf-problem:%tag%
