@@ -11,10 +11,7 @@ namespace ManagedCrash
         private static ThisLib Lib = new ThisLib();
         static void Main(string[] args)
         {
-            Console.WriteLine("start");
-
             //var engine = new JavaScriptEngineSwitcher.ChakraCore.ChakraCoreJsEngineFactory().CreateEngine();
-            Console.ReadLine();
             int seconds = 10;
             if (args.Length >= 1)
                 seconds = int.Parse(args[0]);
