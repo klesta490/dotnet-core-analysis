@@ -35,7 +35,7 @@ docker top <containername>
 
 ## Measure
 ```
-perf record -a -g -F 97 -p <PID>
+perf record -g -F 97 -p <PID>
 ```
 
 ## Analyze results
