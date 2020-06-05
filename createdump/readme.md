@@ -85,6 +85,10 @@ dotnet tool install -g dotnet-symbol
 dotnet symbol coredump.4507
 ```
 
+```
+dumpasync -stacks -roots
+```
+
 [Createdump](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/xplat-minidump-generation.md)
 
 [Sasha Goldstein](http://blogs.microsoft.co.il/sasha/2017/02/26/analyzing-a-net-core-core-dump-on-linux/)
